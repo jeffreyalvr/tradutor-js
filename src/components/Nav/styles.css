@@ -20,4 +20,5 @@ nav .title {
   font-size: 23px;
   color: #fff;
   text-transform: capitalize;
+  font-weight: bold;
 }
