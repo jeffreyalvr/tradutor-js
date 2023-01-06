@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  height: 80px;
+  width: 100%;
+}
+
+nav .icon {
+  height: 24px;
+  width: 24px;
+  border: 0;
+  filter: invert(1);
+  margin: 0 8px 0 0;
+}
+
+nav .title {
+  font-size: 23px;
+  color: #fff;
+  text-transform: capitalize;
+}
