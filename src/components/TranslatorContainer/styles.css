@@ -1,29 +1,131 @@
-.box {
-  width: 600px;
-  height: 300px;
-  padding: 20px 0;
+.container {
+  width: 1300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.box p {
-  font-size: 20px;
+.container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container-header .header-item {
+  width: 600px;
+}
+
+.container-header .header-item p {
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.box p tag {
-  color: orange;
+.container-header .header-item button {
+  padding: 0 10px;
+  background-color: #fff;
+  color: var(--primary);
+  border: 0;
+  border-radius: 10px;
+  height: 30px;
+  box-shadow: 0 1px 2px rgba(180, 176, 176, 0.25);
   text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-header .header-item button img {
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+}
+
+.container-header .header-item button img.active {
+  rotate: 180deg;
+}
+
+.container-header .header-item button:hover {
+  background-color: #fcfcfc;
+}
+
+.container-header .header-item button.active {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.container-header .header-item button.switch {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.container-header .header-item .dropdown {
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.container-header .header-item .dropdown ul {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-header .header-item .dropdown ul li {
+  list-style-type: none;
+  padding: 10px;
+  border-bottom: 1px solid transparent;
+}
+
+.container-header .header-item .dropdown ul li:hover {
+  color: var(--primary);
+  cursor: pointer;
+  border-bottom: 1px solid var(--primary);
+}
+
+.container-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.box {
+  width: 600px;
+  height: 100%;
+  padding: 20px 0;
 }
 
 .box textarea {
   background-color: #fff;
   border-radius: 10px;
-  border: 0;
+  border: 1px solid #e8e8e8;
   box-shadow: 0 1px 2px rgba(152, 152, 152, 0.25);
   outline: 0;
   resize: none;
   padding: 20px;
   font-size: 20px;
-  height: 100%;
+  height: 250px;
   width: 100%;
+}
+
+.box textarea:focus {
+  border: 1px solid var(--primary);
+  transition: ease-in 0.3s;
 }

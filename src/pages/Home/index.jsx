@@ -5,9 +5,7 @@ const Home = () => {
   return (
     <div className="wrapper">
       <Nav title="Tradutor JS" />
-      <div className="container">
-        <TranslatorContainer fromLang={"pt"} toLang={"en"} />
-      </div>
+      <TranslatorContainer />
     </div>
   );
 };

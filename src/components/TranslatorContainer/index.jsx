@@ -1,13 +1,14 @@
 import "./styles.css";
 
-import TranslatorBox from "./TranslatorBox";
+import ContainerHeader from "./ContainerHeader";
+import ContainerBody from "./ContainerBody";
 
-const TranslatorContainer = ({ fromLang, toLang }) => {
+const TranslatorContainer = () => {
   return (
-    <>
-      <TranslatorBox label="Idioma origem" fromLang={fromLang} />
-      <TranslatorBox label="Idioma destino" toLang={toLang} />
-    </>
+    <div className="container">
+      <ContainerHeader fromLang={"pt"} toLang={"en"} />
+      <ContainerBody />
+    </div>
   );
 };
 

@@ -1,10 +1,7 @@
-const TranslatorBox = ({ fromLang, toLang, label }) => {
+const TranslatorBox = ({ readOnly, placeholder }) => {
   return (
     <div className="box">
-      <p>
-        {label} <tag>{fromLang || toLang}</tag>
-      </p>
-      <textarea placeholder="texto..." />
+      <textarea readOnly={readOnly} placeholder={placeholder} />
     </div>
   );
 };

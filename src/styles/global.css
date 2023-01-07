@@ -16,6 +16,10 @@
   font-weight: bold;
 }
 
+:root {
+  --primary: rgb(15, 204, 221);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,18 +32,10 @@ body {
 }
 
 .wrapper {
-  height: auto;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.wrapper .container {
-  display: flex;
-  flex-direction: row;
-  width: 1300px;
-  justify-content: space-between;
-  padding: 5px;
 }

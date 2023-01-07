@@ -3,11 +3,7 @@ import "./styles/global.css";
 import Home from "./pages/Home";
 
 const App = () => {
-  return (
-    <div className="App">
-      <Home />
-    </div>
-  );
+  return <Home />;
 };
 
 export default App;
