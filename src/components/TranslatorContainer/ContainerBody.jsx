@@ -1,10 +1,10 @@
-import TranslatorBox from "./TranslatorBox";
+import Box from "./Box";
 
 const ContainerBody = () => {
   return (
     <div className="container-body">
-      <TranslatorBox placeholder="Digite algo para traduzir..." />
-      <TranslatorBox readOnly={true} placeholder="Tradução" />
+      <Box placeholder="Digite algo para traduzir..." />
+      <Box readOnly={true} placeholder="Tradução" />
     </div>
   );
 };

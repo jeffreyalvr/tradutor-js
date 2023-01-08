@@ -1,24 +1,17 @@
+import "./styles.css";
+
 import { useState } from "react";
 
 import arrow from "../../assets/images/down-arrow.png";
 
-const Button = ({ isFromMethod, lang }) => {
-  const languages = {
-    pt: "português",
-    fr: "francês",
-    es: "espanhol",
-    it: "italiano",
-    de: "alemão",
-    en: "inglês",
-    ru: "russo",
-    jp: "japonês",
-    zh: "chinês",
-    kr: "coreano",
-  };
-
+const LangButton = ({
+  languages,
+  code,
+  setFromLang,
+  setToLang,
+  isFromMethod,
+}) => {
   const [active, setActive] = useState(false);
-  const [fromLang, setFromLang] = useState("pt");
-  const [toLang, setToLang] = useState("en");
 
   const handleClick = () => {
     setActive((prevState) => !prevState);
@@ -26,24 +19,34 @@ const Button = ({ isFromMethod, lang }) => {
 
   const handleChangeLanguage = (isFromMethod, lang) => {
     isFromMethod ? setFromLang(lang) : setToLang(lang);
+    handleClick();
+  };
+
+  const getLanguageName = (arr, code) => {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].code === code) {
+        return arr[i].name;
+      }
+    }
+    return null;
   };
 
   return (
     <>
       <button onClick={handleClick} className={active ? "active" : undefined}>
-        {isFromMethod ? languages[fromLang] : languages[toLang]}
+        {getLanguageName(languages, code)}
         <img src={arrow} className={active ? "active" : undefined} />
       </button>
 
       {active ? (
-        <div className="dropdown">
+        <div className="dropdown" onMouseLeave={handleClick}>
           <ul>
-            {Object.keys(languages).map((lang, index) => (
+            {languages.map((lang, index) => (
               <li
                 key={index}
-                onClick={() => handleChangeLanguage(isFromMethod, lang)}
+                onClick={() => handleChangeLanguage(isFromMethod, lang.code)}
               >
-                {languages[lang]}
+                {lang.name}
               </li>
             ))}
           </ul>
@@ -53,4 +56,4 @@ const Button = ({ isFromMethod, lang }) => {
   );
 };
 
-export default Button;
+export default LangButton;

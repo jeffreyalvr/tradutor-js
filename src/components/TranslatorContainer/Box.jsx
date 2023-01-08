@@ -1,4 +1,4 @@
-const TranslatorBox = ({ readOnly, placeholder }) => {
+const Box = ({ readOnly, placeholder }) => {
   return (
     <div className="box">
       <textarea readOnly={readOnly} placeholder={placeholder} />
@@ -6,4 +6,4 @@ const TranslatorBox = ({ readOnly, placeholder }) => {
   );
 };
 
-export default TranslatorBox;
+export default Box;
